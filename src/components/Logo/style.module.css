@@ -1,0 +1,16 @@
+.logo {
+	position: relative;
+}
+
+
+.headerLogo {
+	position: absolute;
+	 left: 50px;
+}
+
+@media (max-width:  768px) {
+	.headerLogo {
+		position: relative;
+		left: 0px;
+	}
+}

@@ -1,0 +1,426 @@
+blockquote {
+    padding: 60px 80px 40px;
+    position: relative;
+}
+
+blockquote p {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    font-style: normal;
+}
+
+blockquote h3 {
+    font-family: "PT Sans";
+    font-size: 1.7rem;
+}
+
+/*blockquote p::before {
+    content: "\f095"; 
+    font-family: FontAwesome;
+   display: inline-block;
+   padding-right: 6px;
+   vertical-align: middle;
+  font-size: 180px;
+ }*/
+
+blockquote:before {
+    position: absolute;
+
+    top: -30px;
+
+    content: "\201C";
+    font-size: 200px;
+    color: rgba(0, 0, 0, 0.1);
+}
+
+blockquote::after {
+    content: "";
+    top: 20px;
+    left: 50%;
+    margin-left: -100px;
+    position: absolute;
+    border-bottom: 3px solid #f7d56c;
+    height: 3px;
+    width: 200px;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: "PT Sans", sans-serif;
+    font-size: 21px;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Jockey One", sans-serif;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 160px;
+}
+
+h2 {
+    font-size: 92px;
+    margin-top: 20px;
+}
+
+figure {
+    display: inline-block;
+    padding-right: 5px;
+    box-sizing: border-box;
+}
+
+figure.image {
+    padding: 5px;
+    border: 1px solid lightgrey;
+}
+
+.poster {
+    margin: 0px 0px;
+}
+
+.poster p {
+    font-size: 28px;
+}
+
+figcaption {
+    font-size: 14px;
+    font-style: oblique;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.uk-button-bold {
+    font-family: "Jockey One", sans-serif;
+    text-transform: uppercase;
+    font-size: 36px;
+    padding: 10px 20px;
+}
+
+.button-yellow {
+    margin-top: 10px;
+    background: #f7d56c;
+    color: #181818;
+    /*border: 4px solid #181818;*/
+}
+
+.button-yellow:hover {
+    background: #c5a74b;
+    color: #181818;
+}
+
+.change-color {
+    color: #f7d56c;
+}
+
+#category {
+    font-family: Staatliches;
+    font-weight: 500;
+}
+
+#title {
+    letter-spacing: 0.4px;
+    font-size: 28px;
+    font-size: 2.375rem;
+    line-height: 1.13636;
+    margin-top: 0px;
+}
+
+#banner {
+    margin: 20px;
+    height: 800px;
+}
+
+#editor {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+.navbar-container {
+    background: #f7d56c !important;
+    font-family: Staatliches;
+    text-align: center;
+    justify-content: center;
+}
+
+.navbar-nav {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navbar-nav li {
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: white;
+}
+
+.navbar-nav>li {
+    padding: 20px 0px;
+    position: relative;
+}
+
+.navbar-nav>li:before {
+    content: "";
+    width: 0px;
+    height: 4px;
+    background: white;
+    display: block;
+    position: absolute;
+    top: -10px;
+    transition: 0.3s;
+}
+
+.navbar-nav>li:hover:before {
+    width: 100%;
+    transition: 0.3s;
+}
+
+.navbar-nav>li:not(:last-child) {
+    margin-right: 40px;
+}
+
+.navbar-submenu {
+    list-style: none;
+    position: absolute;
+    background: #f7d56c;
+    top: 70px;
+    padding-left: 0;
+    padding: 10px 20px;
+    display: none;
+    border-top: 4px solid white;
+    z-index: 3;
+    min-width: 250px;
+    text-align: left;
+}
+
+.navbar-nav>li:hover>.navbar-submenu {
+    display: block;
+}
+
+.navbar-submenu>li {}
+
+.navbar-submenu a:hover {
+    text-decoration: none;
+}
+
+.navbar-submenu a:hover li {
+    color: #222;
+}
+
+img:hover {
+    opacity: 1;
+    transition: opacity 0.25s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.project-fields {
+    margin-bottom: 40px;
+    padding-top: 15px;
+    position: relative;
+}
+
+.project-fields:after {
+    content: "";
+    width: 200px;
+    height: 1px;
+    display: block;
+    background: lightgrey;
+    position: absolute;
+    bottom: 0;
+}
+
+.project-fields>div:not(:last-child) {
+    margin-right: 40px;
+}
+
+.project-fields h3 {
+    margin-bottom: 5px;
+}
+
+.project-fields p {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.uk-container-large,
+.uk-container-medium {
+    text-align: center;
+}
+
+.uk-grid {
+    justify-content: center;
+}
+
+.projects.completed .uk-grid {
+    justify-content: left;
+}
+
+.uk-card-media-top img {
+    width: 250px;
+    height: 150px;
+    transition: 0.3s;
+}
+
+.uk-card-media-top img:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+/*
+.uk-card-media-top {
+  transition: 0.3s;
+}
+
+.uk-card-media-top:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+*/
+.uk-card-body {
+    padding: 0px;
+}
+
+.black-section {
+    background: #181818;
+    color: white;
+}
+
+.dark-section {
+    background: #2c2c2c;
+    color: white;
+}
+
+.dark-section h1,
+.dark-section h2,
+.dark-section h3 {
+    color: white;
+}
+
+.yellow-section {
+    background: #f7d56c;
+}
+
+.projects.completed img {
+    -webkit-filter: grayscale(100%);
+    /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+
+.footer-scrollTop {
+    cursor: pointer;
+}
+
+.footer a:hover {
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .homepage__banner {
+        flex-direction: column;
+    }
+
+    .homepage__banner div {
+        margin: auto;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+    }
+
+    .navbar-nav>li:not(:last-child) {
+        margin-right: 0px;
+    }
+}
+
+.stripe {
+    border: 1px solid lightgray;
+    padding: 40px;
+}
+
+.stripe__data {
+    max-width: 300px;
+    margin: auto;
+}
+
+.stripe__type,
+.stripe__amount {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.stripe input[type="radio"] {
+    display: none;
+}
+
+.stripe input[type="radio"]+label {
+    cursor: pointer;
+    padding: 5px 20px;
+    border: 1px solid #6e6262;
+    border-radius: 5px;
+}
+
+.stripe input[type="radio"]:checked+label {
+    border: 2px solid black;
+}
+
+.stripe .custom-price-button label {
+    margin-bottom: 10px;
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+}
+
+.stripe .custom-price-input {
+    margin-bottom: 20px;
+}
+
+.stripe .custom-price-input.closed {
+    height: 0px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.stripe .custom-price-input.active {
+    height: auto;
+    transition: 0.3s;
+}
+
+.stripe .custom-price-input input:disabled {
+
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.stripe .custom-price-input input,
+.stripe .payment-description input {
+
+    width: 100%;
+    box-sizing: border-box;
+
+    border: 1px solid lightGrey;
+    margin-bottom: 7px;
+    margin-top: 5px;
+    min-height: 30px;
+    padding-left: 13px;
+    height: 40px;
+    border-radius: 0px;
+    font-family: "PT Sans",
+        sans-serif;
+    font-size: 18px;
+
+
+    height: auto;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.3s;
+}

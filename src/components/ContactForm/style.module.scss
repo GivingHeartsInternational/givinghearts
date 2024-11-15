@@ -1,0 +1,110 @@
+.overlay {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #00000059;
+  z-index: 5;
+  position: fixed;
+}
+
+.contact__popup {
+  z-index: 6;
+  background: transparent;
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, 0);
+  top: 50px;
+}
+
+
+.contact__form {
+  
+display: flex;
+    flex-direction: column;
+    padding: 20px 30px 50px;
+    /*background: linear-gradient(284.89deg, #5b8501 40.15%, #83d901 178.17%);*/
+    background: linear-gradient(284.89deg, #b3b1a8 40.15%, #ffffff 178.17%);
+        background: linear-gradient(
+284.89deg, #b3b1a8e0 40.15%, #ffffffd9 178.17%);
+    border-radius: 20px;
+    box-shadow: 0 4px 4px RGB(0 0 0/25%);
+    min-width: 350px;
+}
+
+ .contact__form h3, .contact__form p, .contact__form label  {
+  color:black;
+}
+
+
+.contact__form input {
+  border: 0px;
+   margin-bottom: 7px;
+    margin-top: 5px;
+    min-height: 30px;
+    padding-left: 13px;
+    height: 40px;
+    border-radius: 23px;
+}
+
+.contact__form textarea {
+    border: 0px;
+        border-radius: 17px;
+    margin-bottom: 5px;
+        margin-top: 5px;
+    min-height: 30px;
+    padding-left: 14px;
+
+        font-family: 'ROBOTO';
+    padding-top: 10px;
+    height: 100px;
+ }
+
+
+.contact__form label {
+  text-shadow: none;
+}
+
+
+.chatButton {
+  cursor:pointer;
+}
+
+
+.contactPopupButton {
+
+    z-index: 5;
+    cursor: pointer;
+    position: fixed;
+    /*bottom: 20px;
+    right: 20px;*/
+
+    background: #c0cb1d40;
+    border-radius: 100%;
+    border: 10px solid #d2d90926;
+    box-shadow: 0 0 0 10px #fffe001c;
+
+ 
+    padding: 10px;
+    display: flex;
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes pulse {
+  from {
+    padding: 10px;
+    bottom: 20px;
+    right: 20px;
+  }
+  to {
+    padding: 0px;
+    bottom: 30px;
+    right: 30px;
+  }
+}

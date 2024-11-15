@@ -1,0 +1,9 @@
+.adminForm input {
+      border: 0px;
+    margin-bottom: 7px;
+    margin-top: 5px;
+    min-height: 30px;
+    padding-left: 13px;
+    height: 40px;
+    border-radius: 23px
+}

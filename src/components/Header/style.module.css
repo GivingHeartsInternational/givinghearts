@@ -1,0 +1,32 @@
+ .mobilemenuButton {
+    position: relative;
+    width: 20px;
+  }
+
+  .mobilemenuButton > span,
+  .mobilemenuButton > span::before,
+  .mobilemenuButton > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #333333;
+  }
+
+  .mobilemenuButton > span::before {
+    content: '';
+    top: -6px;
+  }
+
+  .mobilemenuButton > span::after {
+    content: '';
+    top: 6px;
+  }
+
+
+
+@media (min-width:  768px) {
+  .mobilemenuButton {
+    display: none;
+  }
+}
