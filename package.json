@@ -2,7 +2,7 @@
   "name": "my-next-blog",
   "version": "1.0.0",
   "engines": {
-    "node": "14.x",
+    "node": "20.x",
     "npm": ">=6.0.0"
   },
   "private": true,
