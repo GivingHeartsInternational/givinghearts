@@ -1,4 +1,4 @@
-const stripe = require('stripe')('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');
+const stripe = require('stripe')(process.env.NEXT_PUBLIC_STRIPE_SECRET_KEY);
 
 
 const allowCors = (fn) => async (req, res) => {
