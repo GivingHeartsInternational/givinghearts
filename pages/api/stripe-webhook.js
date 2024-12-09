@@ -6,7 +6,7 @@ const endpointSecret = process.env.STRIPE_WEBHOOK_SECRET;
 
 export const config = {
   api: {
-    bodyParser: false, // Stripe требует отключить bodyParser для обработки raw данных
+    bodyParser: false,
   },
 };
 
@@ -24,26 +24,20 @@ export default async function handler(req, res) {
     const buf = await buffer(req);
     event = stripe.webhooks.constructEvent(buf, sig, endpointSecret);
   } catch (err) {
-    console.error(`⚠️ Webhook signature verification failed.`, err.message);
+    console.error('Webhook signature verification failed:', err.message);
     return res.status(400).send(`Webhook Error: ${err.message}`);
   }
 
-  // Обработка события
   switch (event.type) {
     case 'payment_intent.payment_failed':
-      const paymentIntentPaymentFailed = event.data.object;
-      console.log('Payment failed:', paymentIntentPaymentFailed);
-      // Добавьте свою обработку для неудачных платежей
+      console.log('Payment failed:', event.data.object);
       break;
     case 'payment_intent.succeeded':
-      const paymentIntentSucceeded = event.data.object;
-      console.log('Payment succeeded:', paymentIntentSucceeded);
-      // Добавьте свою обработку для успешных платежей
+      console.log('Payment succeeded:', event.data.object);
       break;
     default:
       console.log(`Unhandled event type ${event.type}`);
   }
 
-  // Подтвердите получение события
   res.json({ received: true });
 }
